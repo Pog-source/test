@@ -3,87 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dental Notes Hub</title>
+    <title>Child Dental Exam Notes Builder</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app landing">
+    <main class="app">
       <header>
-        <h1>Dental Notes Hub</h1>
-        <p>Choose an appointment template to start your note quickly.</p>
+        <h1>Child Dental Exam Notes Builder</h1>
+        <p>Select options to build quick copy/paste dental notes.</p>
       </header>
 
-      <section class="panel stats">
-        <article>
-          <p class="metric">1056</p>
-          <p>appointments complete</p>
-        </article>
-        <article>
-          <p class="metric">27</p>
-          <p>hours saved</p>
-        </article>
-        <article>
-          <p class="metric accent">84200</p>
-          <p>AI score</p>
-        </article>
+      <section class="panel" data-section="Child Exam">
+        <h2>Child Exam</h2>
+        <div class="field" data-key="Age" data-type="single">
+          <h3>Age</h3>
+          <div class="chips">
+            <button class="chip">1</button><button class="chip">2</button><button class="chip">3</button><button class="chip selected">4</button><button class="chip">5</button><button class="chip">6</button>
+          </div>
+        </div>
+        <div class="field" data-key="Attending with" data-type="single">
+          <h3>Attending with</h3>
+          <div class="chips">
+            <button class="chip selected">Mum</button><button class="chip">Dad</button><button class="chip">Mum and Dad</button><button class="chip">Alone</button>
+          </div>
+        </div>
+        <div class="field" data-key="Co-operation" data-type="single">
+          <h3>Co-operation</h3>
+          <div class="chips">
+            <button class="chip">Poor</button><button class="chip">Good</button><button class="chip selected">Excellent</button>
+          </div>
+        </div>
+        <div class="field" data-key="C/O" data-type="single">
+          <h3>C/O</h3>
+          <div class="chips">
+            <button class="chip selected">Nil</button><button class="chip">Pain</button>
+          </div>
+        </div>
       </section>
 
-      <section class="panel">
-        <div class="tabs" aria-label="Note state tabs">
-          <button class="tab active">New Note</button>
-          <button class="tab">Drafts</button>
-          <button class="tab">Auto-saved</button>
-          <button class="tab">Completed</button>
+      <section class="panel" data-section="Medical History">
+        <h2>Medical History</h2>
+        <p class="fixed-line">Form filled and signed - See section</p>
+        <div class="field" data-key="Allergies" data-type="single" data-prefix="">
+          <h3>Allergies</h3>
+          <div class="chips">
+            <button class="chip selected">No relevant allergies</button><button class="chip">Allergic to penicillin</button>
+          </div>
         </div>
-
-        <input
-          class="search"
-          type="search"
-          placeholder="Search templates..."
-          aria-label="Search templates"
-        />
-
-        <div class="filters">
-          <button class="filter">Restorative</button>
-          <button class="filter">Endo</button>
-          <button class="filter">Perio</button>
-          <button class="filter">Oral Surgery</button>
-          <button class="filter">Exams & Assessment</button>
+        <div class="field" data-key="Medication" data-type="single" data-prefix="">
+          <h3>Medication</h3>
+          <div class="chips">
+            <button class="chip selected">No relevant medication</button><button class="chip">Ventolin</button><button class="chip">Melatonin</button>
+          </div>
         </div>
-
-        <div class="template-grid">
-          <a class="template-card featured" href="child-exam.html">
-            <h3>Young Child Exam</h3>
-            <p>Use for paediatric exam + clean notes</p>
-            <span>Open template →</span>
-          </a>
-
-          <a class="template-card" href="#">
-            <h3>Child Recall Easy</h3>
-            <p>Used 8 times</p>
-          </a>
-
-          <a class="template-card" href="#">
-            <h3>Extraction Child</h3>
-            <p>Used 20 times</p>
-          </a>
-
-          <a class="template-card" href="#">
-            <h3>Restoration</h3>
-            <p>Used 225 times</p>
-          </a>
-
-          <a class="template-card" href="#">
-            <h3>Perio Emergency</h3>
-            <p>Used 11 times</p>
-          </a>
-
-          <a class="template-card" href="#">
-            <h3>Endo</h3>
-            <p>Used 34 times</p>
-          </a>
+        <div class="field" data-key="Conditions" data-type="single" data-prefix="">
+          <h3>Conditions</h3>
+          <div class="chips">
+            <button class="chip selected">No relevant conditions</button><button class="chip">Asthma</button><button class="chip">ASD</button><button class="chip">ADHD</button>
+          </div>
         </div>
+      </section>
+
+      <section class="panel" data-section="Dental History">
+        <h2>Dental History</h2>
+        <div class="field" data-key="Sugars in diet" data-type="single">
+          <h3>Sugars in diet</h3>
+          <div class="chips"><button class="chip selected">Low</button><button class="chip">Medium</button><button class="chip">High</button></div>
+        </div>
+        <div class="field" data-key="Brushing" data-type="multi" data-join=", ">
+          <h3>Brushing</h3>
+          <div class="chips"><button class="chip">Once</button><button class="chip selected">Twice</button><button class="chip">Self</button><button class="chip selected">Assisted brushing</button></div>
+        </div>
+        <div class="field" data-key="Last check up" data-type="single">
+          <h3>Last check up</h3>
+          <div class="chips"><button class="chip">First Time</button><button class="chip selected">3m</button><button class="chip">6m</button><button class="chip">9m</button><button class="chip">12m</button></div>
+        </div>
+        <div class="field" data-key="Intake after night time brushing" data-type="single">
+          <h3>Intake after night time brushing</h3>
+          <div class="chips"><button class="chip selected">Nil</button><button class="chip">Milk</button><button class="chip">Snack</button></div>
+        </div>
+      </section>
+
+      <section class="panel" data-section="Tissue Exam">
+        <h2>Tissue Exam</h2>
+        <div class="field" data-key="E/O (LN,MOM,SG,TMJ)" data-type="single"><div class="chips"><button class="chip selected">Nil</button></div></div>
+        <div class="field" data-key="I/O (Tongue,FOM, palate, mucosa)" data-type="single"><div class="chips"><button class="chip selected">Nil</button></div></div>
+        <div class="field" data-key="Gingivae" data-type="single"><div class="chips"><button class="chip selected">Healthy</button><button class="chip">Mild inflammation</button></div></div>
+      </section>
+
+      <section class="panel" data-section="Intra Oral Exam">
+        <h2>Intra Oral Exam</h2>
+        <div class="field" data-key="Teeth present" data-type="single"><div class="chips"><button class="chip selected">All deciduous teeth</button><button class="chip">Mixed dentition</button></div></div>
+        <div class="field" data-key="Oral Hygiene" data-type="single"><div class="chips"><button class="chip">Poor</button><button class="chip">Good</button><button class="chip selected">Excellent</button></div></div>
+        <div class="field" data-key="Caries" data-type="single"><div class="chips"><button class="chip selected">Nil</button><button class="chip">Present</button></div></div>
+        <div class="field" data-key="Caries Risk" data-type="single"><div class="chips"><button class="chip selected">Low</button><button class="chip">Medium</button><button class="chip">High</button></div></div>
+      </section>
+
+      <section class="panel" data-section="Radiographs">
+        <h2>Radiographs</h2>
+        <div class="field" data-key="" data-type="single" data-prefix="">
+          <div class="chips"><button class="chip selected">Not indicated today</button><button class="chip">BWs taken for caries assessment</button></div>
+        </div>
+      </section>
+
+      <section class="panel" data-section="Tx">
+        <h2>Tx</h2>
+        <div class="field" data-key="OHI reinforced" data-type="single">
+          <div class="chips"><button class="chip selected">Brushing twice daily</button><button class="chip">6 monthly review of brushing</button></div>
+        </div>
+        <div class="field" data-key="Dietary advice" data-type="single" data-prefix="">
+          <div class="chips"><button class="chip selected">Minimise Sugar Intake, Keep snacks near mealtime, avoid food after brushing</button></div>
+        </div>
+        <div class="field" data-key="" data-type="single" data-prefix="">
+          <div class="chips"><button class="chip selected">Clean completed with prophy paste. Tooth mousse plus. POIG.</button></div>
+        </div>
+      </section>
+
+      <section class="panel" data-section="N/V">
+        <h2>N/V</h2>
+        <div class="field" data-key="" data-type="single" data-prefix="">
+          <div class="chips"><button class="chip selected">Recall Exam and Clean, 10m, 6months</button></div>
+        </div>
+        <div class="field" data-key="" data-type="single" data-prefix="">
+          <div class="chips"><button class="chip selected">88011, 88114, 88121</button></div>
+        </div>
+      </section>
+
+      <section class="output panel">
+        <div class="output-header">
+          <h2>Generated Notes</h2>
+          <button id="copyNotes" class="copy">Copy notes</button>
+        </div>
+        <textarea id="notes" rows="18" readonly></textarea>
       </section>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
